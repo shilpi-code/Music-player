@@ -1,0 +1,45 @@
+.coldplay img{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+} 
+.icon i {
+  font-size: 6rem;
+  position: absolute;
+  left: 10%;
+  top: 20%;
+}
+.icon a{
+  color: black;
+}
+div .items{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.western img{
+  height: 200px;
+  width: 200px;
+
+}
+.western img:hover{
+  height: 400px;
+  width: 400px;
+}
+.retro img{
+height: 200px;
+width: 200px;
+} 
+.retro img:hover{
+  height: 400px;
+  width: 400px;
+}
+.workout img{
+  height: 200px;
+  width: 200px;
+
+}
+.workout img:hover{
+  height: 400x;
+  width: 400px;
+}
