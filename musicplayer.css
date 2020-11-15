@@ -1,0 +1,781 @@
+html{
+    background-color:#030619;
+    font-family: sans-serif;
+}
+body{
+    font-family: serif;
+    color: crimson;
+}
+/*for all headings*/
+.name-heading {
+    font-weight: bold;
+    margin: 0.6rem;
+    font-size: 2rem;
+    color: white;  
+}
+/* top-navigation-bar */
+.top-bar{
+    display: flex;
+    flex-direction: row;
+     position: fixed; 
+    width:100%;
+    height: auto;
+    justify-content: space-between;
+    z-index:3;
+    background-image: linear-gradient(60deg, black,#cc2fc2);
+}
+.header-left{
+    width: 30vw;
+    display: flex;
+}
+/* music studio logo */
+#logo{
+    height:90% ;
+    width:35%;
+}
+#logo img{
+    left: 5%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#logo-name{
+    display: block;
+    height: 20%;
+    width: 20%;
+    padding: 5%;
+    font-weight: bold;
+}
+#logo-name span{
+    font-size: 1.3rem;
+    color: white;
+}
+.favourites h2{
+    font-weight: bold;
+    color: white;
+}
+/* right part in top bar */
+#header-right{
+    display: flex;
+    width: 45vw;
+}
+.search{
+    position: relative;
+    width: 38vw;
+    height: 8vh;
+}
+.search input{
+    position: absolute;
+    box-sizing: border-box;
+    top: 5;
+    width: 95%;
+    height: 2.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    padding-left: 1.8rem;
+    font-size: 1.3rem;
+}
+ /* for microphone icon in search box  */ 
+.search  #audio i{     
+    position: relative;
+    left: 85%;
+    font-size: 2.2rem;
+    padding: 2px;
+    bottom: 22;
+    z-index:4;
+}
+/* for zooming icon in search box*/
+.search #zoom i{        
+    position: relative;
+    left: 0;
+    top: 14;
+    font-size: 1.8rem;
+    padding: 2px;
+    z-index: 1; 
+}
+/* for bell icon in top bar*/
+.bell-icon i{     
+    font-size: 2.5rem;
+    color:white;
+    position: relative;
+    right: 25%;
+    top:12%;
+}
+/* for my profile in top bar*/
+.my-profile{
+    height: 70%;
+    width: 15%;
+   z-index: 3;
+}
+.my-profile img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+/* header part for mobile */
+#aside-btn input{
+    display: none;
+}
+#aside-btn label{
+	color: white;
+	font-size: 1.8rem;
+	cursor: pointer;
+    display: none;
+}
+#aside-menu{
+	width: 300px;
+	height: 100vh;
+	background-color:#0c112d;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index:999999999999;
+	display: none;
+}
+#btn:checked ~ #aside-menu{
+	display: block;
+	opacity: 1;  
+}
+
+/* aside-container */
+
+#aside-menu #aside-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* profile in left-aside part */
+#aside-menu #aside-profile{
+	width: 5rem;
+	height: 5rem;
+	margin: 2rem 0;
+}
+#aside-menu #aside-profile img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+/* favourite part in aside left */
+#aside-menu #aside-fav{
+	font-size: 2rem;
+	margin: 0rem 0 2rem;
+	color: white;
+	cursor: pointer;
+}
+/* search-bar */
+ #aside-search-bar{
+	width: 84%;
+	border-radius: 10px;
+	padding: 5px;
+	position: relative;
+	background-color: black;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+ #aside-search-bar #input{
+	width: 84%;
+	font-size: 1.5rem;
+	outline: none;
+	border: none;
+	padding: 5px;
+	color: white;
+	background-color: #5050ff00;
+	display: block;
+}
+/* search-icon in aside left */
+#aside-search-bar span{
+	color: white;
+	font-size: 1.5rem;
+	font-weight: 100;
+}
+#aside-search-bar #input::placeholder{
+	font-size: 1.7rem;
+}
+
+#aside-search-bar span .fa-microphone{
+	color: silver;
+}
+
+/* main  */
+
+main{
+    display: inline-block;
+    width: 70%;
+    overflow-y:scroll;
+    margin-left: 2vw;
+}
+aside{
+    overflow-y:scroll;
+}
+aside{
+   height: 90%; 
+}
+section{
+    width: auto;
+    height: 60%;
+}
+::-webkit-scrollbar{
+    width: 1px;
+}
+
+/* Top picks section  */
+
+section#top-picks-section{
+    height: auto;
+}
+.top-picks{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10vw;
+    align-items: center;
+    justify-content: center;
+}
+/* carousel in top picks section */
+.top-picks>div{
+    box-shadow: 0 0 5px 5px rgb(30, 53, 255);
+}
+.picks-items-1 img{
+    width: 14vw;
+    height: 23vh;
+}
+.picks-items-2{
+    z-index: 1;
+}
+.picks-items-2 img{
+    width: 25vw;
+    height: 30vh;
+}
+.picks-items-3 img{
+    width: 14vw;
+    height: 23vh;
+}
+.picks-items-1:hover{
+    transform: scale(1.15);
+    filter: none;
+	z-index: 2;
+    box-shadow: 0 0 5px 5px rgb(233, 62, 10) ;
+}
+.picks-items-2:hover{
+    transform: scale(1.15);
+    z-index: 5;
+}
+.picks-items-3:hover{
+    transform: scale(1.15);
+    filter: grayscale(0);
+    z-index:2;
+    box-shadow: 0 0 5px 5px rgb(233, 62, 10) ;
+}
+/* for graying out an image */
+.gray{
+    filter: grayscale(100);
+}
+
+/* Moods and collection section*/
+
+section#moods-section{
+    height: auto;
+}
+.moods-and-collection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;   
+}
+.moods{
+    position: relative;
+}
+.moods img{
+    height: 10rem;
+    width: 10rem;
+    margin: 0.6rem;
+}
+.moods p{
+    position: absolute;
+    left: 25%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    bottom: 10;
+    color: white;   
+}
+
+/* latest release section*/
+
+section#latest-release-section{
+    height: auto;
+    margin-right: 5%;
+}
+.latest-release{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:100%;
+}
+.latest-release .latest-release-items{
+    position: relative;
+    width:48%;
+    display: flex;
+    align-items: center;
+}
+.latest-release .latest-release-items>div{
+    margin-bottom: 3rem;
+}
+.img-part{
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+}
+.img-part .latest-release-img{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+.img-part .latest-release-img img{
+    width: 100%;
+    height: 100%;
+}
+.img-part i{
+    font-size:1rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.item-detail{
+    width:14rem;
+    padding:1rem;
+}
+.item-detail-name{
+    color: white;
+    font-size: 1.3rem;
+}
+.item-detail span{
+    display: block;
+    line-height: 2rem;
+}
+
+/* dropdown-list part in latest-release-section */
+.dropdown-icon i{
+    font-size:2rem;
+    position: relative;
+    color: white;
+    z-index:1;
+}
+.dropdown-list {
+    display: none; 
+    background-color: lightgray;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    height: 100%;
+    width: 40%;
+    line-height: 1.5rem;
+}
+.latest-release-items i:hover{
+    color: black;
+}
+.dropdown-list li{
+    text-align: left;
+    list-style-type: none;
+    color: black;
+    border-bottom: 2px solid black;
+}
+ .menu:hover .dropdown-list{
+    display: block;
+    margin-top: 0;
+}
+
+/* Popular artists section */
+
+section#popular-artists-section{
+   height: auto;
+}
+.top-artists {
+    display: flex;
+    flex-direction: row;   
+}
+.circle{
+    position: relative;
+}
+/* top artist image */
+.circle img{
+    border-radius: 50%;
+    border:2px solid black;
+    width: 95%;
+    height: 7rem;
+}
+/* detail of an artist */
+.artist-detail a{
+    transform: translate(-50%,-50%);
+}
+/* three dot icon corresponding to different artists*/
+.artist-detail i{
+    font-size:1.5rem;
+    color:white;
+    position: absolute;
+    top:30%;
+    left:35%;
+    opacity: 0;
+}
+.artist-detail i:hover{
+    opacity:1;
+}
+.circle p{
+    font-size: 1.2rem;
+    font-family: 'Times New Roman';
+    margin-left: 0.5rem;
+    text-align:center;
+    color:white;
+}
+
+/* Top Charts section */
+
+section#top-chart-section{
+    height: auto;
+}
+.top-chart{
+    display: flex;
+}
+.top-chart-items{
+    width:50%;
+    height:auto;
+    /*height: 50%;*/
+    margin: 1%;
+}
+.top-chart-items img{
+    width: 95%;
+    height: 8rem;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.top-chart-items p{
+    bottom:20%;
+    font-size: 1rem;
+    color: white;
+}
+
+/* Latest English songs section*/
+
+section#latest-english-lists{
+   height: auto;
+}
+.latest-english-songs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.latest-english-items img{
+    height: 9rem;
+    width: 12vw;
+}
+.latest-english-items p{
+    font-size:1.3rem;
+    text-align: center;
+} 
+ /* Latest Hindi songs section */
+
+ section#latest-hindi-lists{
+    height: auto;
+}
+.latest-hindi-songs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.latest-hindi-items img{
+    height: 9rem;
+    width: 12vw;
+}
+.latest-hindi-items p{
+    font-size:1.3rem;
+    text-align: center;
+
+} 
+
+/* aside queue */
+
+aside{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 2%;
+    margin-top: 4%;
+    width: 24%;
+}
+.queue{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-left:8%;
+}
+.queue-dropdown {
+    display: block;
+    height: 23%;
+    width: 55%;
+    background-color: white;
+    color: black;
+    line-height: 2.4;
+    margin-left: 25%;
+    margin-top: -5%;
+    border-radius: 5%;
+}
+#queue-icon i{
+    color:green;
+}
+.queue-dropdown li{
+    list-style-type: none;
+    font-size: 1rem;
+    border-bottom: 2px solid black;
+}
+.queue-list {
+    display: flex;
+    margin-top: 10%;
+    align-items: center;
+    justify-content: space-around;
+    color:pink;
+  }
+  .queue-list p {
+    widows: 1rem;
+  }
+  .queue-list .img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .queue-list .img img {
+    width: 100%;
+    height: 100%;
+  }
+  .queue-heart-icon {
+    width: 1.5rem;
+  }
+  .queue-heart-icon i {
+    font-size: 1.4rem;
+  }
+ .queue-name {
+    width: 8rem;
+    color:white;
+  }
+  .queue-name span {
+    display: block;
+  }
+/* bottom-footer  */
+footer{
+    background-color:lightgrey;
+    box-sizing: border-box;
+    margin-top: 5rem;
+    padding: 1rem;
+    width: 100%;
+    padding-top: 2rem;
+    display:flex;
+}
+.footer-left{
+    display: flex;
+    width:25%;
+    justify-content: space-between;
+   /* height: 10vh;*/
+}
+.footer-image{
+    width:30%;
+    height: 100%;
+    margin-left: 5%;
+}
+.footer-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.footer-name span{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.footer-name span{
+    display: block;
+}
+.footer-heart i{
+    font-size: 2rem;
+}
+/* middle part in bottom footer */
+.bottom-music-player{
+    display: flex;
+    flex-direction: column;
+    width: 50%;  
+    align-items: center;
+}
+.upper-icons{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+.shuffle-icon i{
+    font-size: 2rem;
+    margin-left: 1.8rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+.pause-icon i{
+    font-size: 2.5rem;
+    margin-left: 1.8rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+.step-forward-icon i{
+    font-size: 2rem;
+    margin-left: 1.8rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+.step-backward-icon i{
+    font-size: 2rem;
+    margin-left: 1.8rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+.sync-icon{
+    font-size: 2rem;
+    margin-left: 1.8rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+.range-bar input{
+    height: 40%;
+    width: 25rem;
+}
+/* right part in bottom footer */
+.footer-right{
+    display: flex;
+    flex-direction: row;
+    width:25%;
+}
+.right-list i{
+    font-size: 2rem;
+    margin-left: 1.8rem;
+}
+.volume-up i{
+    font-size: 2rem;
+    margin-left: 1.8rem;
+}
+.range-right{
+   margin-left: 1.8rem;
+}
+.range-right input{
+    width:10rem;
+}
+/* on targeting footer */
+#footer:target{
+	height: auto;
+	width: 100%;
+}
+
+/* media queries  */
+@media screen and (max-width:1100px){
+        #aside-btn label{
+            display: block;
+            margin-top:53%;
+
+        }
+        #header-right .search{
+            display:none;
+        }
+        #header-right .bell-icon{
+            margin-left:50%;
+        }
+        #header-right .my-profile{
+            display:none;
+        }
+        .favourites{
+            display: none;
+        }
+        .circle p{
+            font-size: 1rem;
+        }
+        .latest-hindi-items p {
+            font-size: 1rem;
+        }
+        .latest-english-items p {
+            font-size: 1rem;
+        }
+        aside{
+            display: none;
+        }
+        
+        main{
+                width:90%;
+            }
+        
+        .latest-release{
+            height: auto;
+        }
+        .latest-release{
+            flex-direction: column;
+        }
+        .latest-release .latest-release-items{
+            width:100%;
+            justify-content: space-around;
+        }        
+        .dropdown-list li{
+            font-size: 0.9rem;
+        }
+        .footer-left{
+            display: none;
+        }
+        .footer-right{
+            display: none;
+        }
+        .bottom-music-player{
+            margin-left: 20%;
+            align-content: center;
+        }
+}
+/*@media screen and (max-width:1100px){
+    
+    main{
+        width:90%;
+    }
+
+    .latest-release{
+        height: auto;
+    }
+    .latest-release{
+        flex-direction: column;
+    }
+    .latest-release .latest-release-items{
+        width:100%;
+        justify-content: space-around;
+    }        
+    .dropdown-list li{
+        font-size: 0.9rem;
+    }
+    aside{
+            display:none;
+        }
+    #aside-btn label{
+        display: block;
+        margin-top:53%;
+
+    }
+    #header-right .search{
+        display:none;
+    }
+    #header-right .bell-icon{
+        margin-left:50%;
+    }
+    #header-right .my-profile{
+        display:none;
+    }
+    .favourites{
+        display: none;
+    }
+    .footer-left{
+        display: none;
+    }
+    .footer-right{
+        display: none;
+    }
+    .bottom-music-player{
+        margin-left: 20%;
+        align-content: center;
+    }
+}
+*/
