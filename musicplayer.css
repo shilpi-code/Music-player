@@ -17,7 +17,7 @@ body{
 .top-bar{
     display: flex;
     flex-direction: row;
-     position: fixed; 
+    position: fixed; 
     width:100%;
     height: 12%;
     justify-content: space-between;
@@ -35,7 +35,7 @@ body{
 }
 #logo img{
     left: 5%;
-    width: 100%;
+    width: 70%;
     height: 100%;
     border-radius: 50%;
 }
@@ -110,7 +110,7 @@ body{
 }
 .my-profile img{
     height: 100%;
-    width: 100%;
+    width: 90%;
     border-radius: 50%;
 }
 /* header part for mobile */
@@ -683,6 +683,15 @@ footer{
         }
         #header-right .my-profile{
             display:none;
+        }
+        #logo img{
+            width:4.5rem;
+        }
+        .top-bar{
+            height: 8%;
+        }
+        .bell-icon i{
+            font-size: 2rem;
         }
         .favourites{
             display: none;
